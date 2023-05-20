@@ -7,7 +7,15 @@ app.use(bodyParser.json())
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: true}));
 
-mongoose.connect("mongodb+srv://hackdavis:moomoo@mimo.pzmvxek.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://hackdavis:moomoo@mimo.pzmvxek.mongodb.net/journalDB")
+
+// Create data schema
+const journalSchema = {
+   title: String,
+   content: String 
+}
+
+const Journal = mongoose.model("Journal", journalSchema);
 
 app.get("/", function(req, res) {
     res.send("express is working")
