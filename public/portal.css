@@ -27,7 +27,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: auto;
     align-content: center
 }
@@ -45,15 +45,26 @@
 
 .card_entries {
     flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     margin: 25px;
-    width: 150px; 
+    width: 180px; 
     height: 150px;
+
     background-color: #F0EAE4;    /* Set up Border */
     border-radius: 4px;           /* Slightly Curve edges */
     overflow: hidden;             /* Fixes the corners */
     
+    font-size: 16px;
+}
+
+#new_entry {
+    font-size: 30px;
 }
 
 .title_entry {
-    
+
 }

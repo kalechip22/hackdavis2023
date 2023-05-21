@@ -14,9 +14,12 @@ fetch('/all-entries', {
     console.log("here");
     return response.json();
  }) .then(function(obj) {
+   let i = 0;
     obj.forEach(res => {
-        let card = document.createElement("div");
+        i++;
+        let card = document.createElement("button");
         card.className = "card_entries";
+        card.setAttribute("id", "button"+i);
 
         let title = document.createElement("div");
         title.className = "title_entry";
@@ -26,6 +29,10 @@ fetch('/all-entries', {
 
         let date = document.createElement("div");
         date.className = "date_entry"
+
+        let content = document.createElement("div");
+        let contentText = document.createTextNode(res.content);
+        
 
         let wholeDate = res.date;
         console.log(wholeDate);

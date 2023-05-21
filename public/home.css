@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Raleway:wght@300;500&family=Source+Sans+Pro&display=swap');
 /* UTILITIES */
 * {
     margin: 0;
@@ -8,20 +7,15 @@
     }
     
     body {
+    font-size: 22px;
     font-family: "Raleway", sans-serif;
-    background-color: #F0EAE4;
+    font-weight: 500;
+    background-color: #F5F5E7;
+    color: #4A4C49;
     }
     
     a {
     text-decoration: none;
-    }
-    
-    li {
-    list-style: none;
-}
-
-.main {
-    margin-top: 300px; /* Add a top margin to avoid content overlay */
 }
 
 /* NAVBAR STYLING STARTS */
@@ -30,8 +24,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: #36b49f;
-    color: #fff;
+    background-color: #F5F5E7;
 
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
@@ -39,7 +32,7 @@
 }
     
 .nav-links a {
-color: #fff;
+color: #4A4C49;
 }
 
 .leaf_icon {
@@ -49,6 +42,7 @@ color: #fff;
 
 /* LOGO */
 .logo {
+    margin-left: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -58,18 +52,7 @@ color: #fff;
 }
 
 .login {
-    border-radius: 25px;
-    border: 2px solid #fff;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 200px;
-    height: 150px; 
-}
-
-.login:hover {
-
+    margin-right: 50px;
 }
 
 /* NAVBAR MENU */
@@ -80,69 +63,115 @@ font-size: 18px;
 }
 
 .list:hover {
-background-color: #4ac8b3;
-border-radius: 5px;
-transition: 0.5s ease;
+background-color: #FFFFF6;
+border-radius: 10px;
+transition: 0.3s ease;
 }
 
 .menu li {
-padding: 5px 14px;
+    list-style: none;
+    padding: 8px 14px;
 }
 
-/* DROPDOWN MENU */
-.services {
-position: relative; 
+@keyframes fadeInOutAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.dropdown {
-background-color: #36b49f;
-padding: 1em 0;
-position: absolute; /*WITH RESPECT TO PARENT*/
-display: none;
-border-radius: 8px;
-top: 35px;
+.firstMessage{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0px;
+    height: 100vh;
+    font-family: "Montserrat";
+
+    cursor: pointer;
+    animation: fadeInOutAnimation 2s;
+    animation-timing-function: ease-in-out;
 }
 
-.dropdown li + li {
-margin-top: 10px;
+#titleText{
+    padding-top: 50px;
+    font-size: 100px;
+    font-weight: 300;
 }
 
-.dropdown li {
-padding: 0.5em 1em;
-width: 8em;
-text-align: center;
+#directions{
+    padding-top: 20px;
+    font-size: 50px;
+    padding-bottom: 30px;
 }
 
-.dropdown li:hover {
-background-color: #36b49f;
+.hook, .works, .lastOne{
+    margin: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-around;
 }
 
-.services:hover .dropdown {
-display: block;
+.text{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 45%;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
-
-/* RESPONSIVE NAVBAR MENU STARTS */
-
-/* CHECKBOX HACK */
-
-input[type=checkbox] {
-    display: none;
-} 
-    
-/* HAMBURGER MENU */
-.hamburger {
-display: none;
-font-size: 24px;
-user-select: none;
+.images{
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
+
+.info {
+    margin: 5px;
+}
+
+.flipCard{
+    /* display: flex;
+    align-items: center; */
+    padding-right: 45px;
+    padding-left: 45px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    /* display: inline-block; */
+    text-align: left;
+    width: 65%;
+
+    background-color: #ABDBAF;
+    border-radius: 15px;
+ }
+
+ #theHook {
+    margin-left: 10px;
+ }
+
+ #imageBox{
+    width: 200px;
+    height: 100px;
+ }
     
 /* APPLYING MEDIA QUERIES */
 @media (max-width: 768px) {
     .menu {
         display:none;
         position: absolute;
-        background-color:#36b49f;
+        background-color:#E8E8D9;
         right: 0;
         left: 0;
         text-align: center;
@@ -151,7 +180,7 @@ user-select: none;
 
     .menu li:hover {
         display: inline-block;
-        background-color:#36b49f;
+        background-color:#E8E8D9;
         transition: 0.3s ease;
     }
 
@@ -162,41 +191,4 @@ user-select: none;
     input[type=checkbox]:checked ~ .menu {
         display: block;
     }
-
-    .hamburger {
-        display: block;
-    }
-
-    .dropdown {
-        left: 50%;
-        top: 30px;
-        transform: translateX(35%);
-    }
-
-    .dropdown li:hover {
-        background-color: #36b49f;
-    }
-}
-
-.button_box {
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Buttons */
-.button {
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
 }
