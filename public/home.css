@@ -124,14 +124,16 @@ display: block;
 /* the main section that should be scroll */
 .main{
     /* display: flex; */
+    height: 100%;
     background-color: blue;
     /* flex-direction: row; */
     /* display: 100%; */
 }
-.hook{
+.hook, .works{
     background-color: red;
     display: flex;
     flex-direction: row;
+    height: 33%;
 }
 .left1{
     display: inline-block;
