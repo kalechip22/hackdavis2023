@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Raleway:wght@300;500&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&family=Raleway:wght@300;500&family=Source+Sans+Pro&display=swap');
 /* UTILITIES */
 * {
     margin: 0;
@@ -65,7 +65,7 @@ h1 {
     align-items: center;
 
     margin: 25px;
-    width: 200px; 
+    width: 220px; 
     height: 140px;
 
     background-color: #ABDBAF;    /* Set up Border */
@@ -77,14 +77,14 @@ h1 {
 }
 
 .title_entry{
-    font-size: 18px;
-    font-weight: 800;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .date_entry{
     margin-top: 10px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 #new_entry {
@@ -113,17 +113,34 @@ button:hover {
     transition: .3s linear;
 }
 
-.content {
-    z-index: 4;
+.overlay {
+    position:fixed;
+    z-index: 2;
+    top:30vh;
+    left:33vw;
     background-color: #ABDBAF;
     border-radius: 4px;
     transition: .3s linear;
 
-    width: 30vw;
-    height: 40vh;
-    padding: 15px;
+    width: 35vw;
+    height: 45vh;
+    padding: 20px;
 
     font-size: 25px;
+}
+
+.exit {
+    border: none;
+    outline: none;
+    background-color: #ABDBAF;
+    color: #4A4C49;
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.exit:hover {
+    color: white;
 }
 
 .hide {
@@ -132,4 +149,15 @@ button:hover {
 
 .show {
     display: block;
+    animation: fadeInOutAnimation 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeInOutAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

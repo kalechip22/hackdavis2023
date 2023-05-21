@@ -6,7 +6,8 @@
 //    .then(response => response.text())
 //    .then(text => console.log(text))
 const buttons = document.getElementsByTagName("button");
-
+const arr = new Array("1000");
+var lastOpen = 0;
 
 fetch('/all-entries', {
     headers: {
@@ -39,19 +40,24 @@ fetch('/all-entries', {
         date.appendChild(dateText);
         card.appendChild(date);
 
-        let shadowBox = document.createElement("div");
-        shadowBox.className = "box hide"
-        shadowBox.setAttribute("id", "box"+i);
-        let content = document.createElement("div");
-        let contentText = document.createTextNode(res.content);
-        content.className = "content hide"
-        content.appendChild(contentText);
-        content.setAttribute("id", "text"+i);
-        card.appendChild(content);
-        card.appendChild(shadowBox);
-
         let container = document.querySelector("#entries");
         container.appendChild(card);
+
+        arr[i] = res.content;
+      //   let shadowBox = document.createElement("div");
+      //   shadowBox.className = "box hide"
+      //   shadowBox.setAttribute("id", "box"+i);
+      //   let content = document.createElement("div");
+      //   let contentText = document.createTextNode(res.content);
+      //   content.className = "content hide"
+      //   content.appendChild(contentText);
+      //   content.setAttribute("id", "text"+i);
+        
+      //   let overlay = document.getElementsByTagName("overlay");
+      //   overlay.appendChild(content);
+      //   overlay.appendChild(shadowBox);
+
+        
         
       //   let container2 = document.getElementsByClassName("main");
       //   container2.appendChild(shadowBox);
@@ -60,16 +66,14 @@ fetch('/all-entries', {
 
     for (i of btns) {
       i.addEventListener('click', function() {
-        let find = "#text"+this.id
-        console.log(find);
+        var paragraph = document.getElementById("text");
+        paragraph.textContent = arr[this.id];
+        lastOpen = this.id;
+        let overlay = document.getElementById("content");
+        overlay.className = "overlay show";
 
-        let overlay = document.querySelector(find);
-        overlay.className = "content show";
-
-        let find2 = "#box"+this.id
-
-        let overlay2 = document.querySelector(find2);
-        overlay2.className = "box show";
+        let box = document.getElementById("shadow");
+        box.className = "box show";
       });
     }
     
@@ -79,25 +83,10 @@ fetch('/all-entries', {
  });
 
 
-//  const wrapper = document.getElementById('entries');
+ function erase() {
+   let overlay = document.getElementById("content");
+   overlay.className = "overlay hide";
 
-//  wrapper.addEventListener('click', (event) => {
-//     const isButton = event.target.nodeName === 'BUTTON';
-//     if (!isButton) {
-//     return;
-//     }
-//     console.log(event.target.id);
-//     let overlay = document.querySelector("text"+event.target.id);
-//     overlay.className = "content show";
-
-
-
-
-
-
- 
-//     console.dir();
-//  })
-
-
-
+   let box = document.getElementById("shadow");
+   box.className = "box hide";
+ }
