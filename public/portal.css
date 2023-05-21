@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Raleway:wght@300;500&family=Source+Sans+Pro&display=swap');
 /* UTILITIES */
 * {
     margin: 0;
@@ -8,7 +8,6 @@
     
     body {
         font-family: "Raleway", sans-serif;
-        background-color: #4ac8b3;
     }
     
     a {
@@ -19,28 +18,43 @@
     list-style: none;
 }
 
+a {
+    color: #4A4C49;
+}
+
+.subject {
+    height: 90vh;
+    margin-top: 120px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5E7;
+}
+
+.container {
+    width: 75vw;
+}
+
 #entries{
-    background-color: red;
     /* display: flex;
     flex-wrap: wrap;
     justify-content: space-between; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: auto;
-    align-content: center
-}
-
-/* .container:after {
-    display: block;
-    content: " placeholder ";
-    margin: 25px;
-    flex: 999 999 auto;
-} */
-
-.new {
-    background-color: blue;
+    align-content: center;
+    
 }
 
 .card_entries {
@@ -51,20 +65,71 @@
     align-items: center;
 
     margin: 25px;
-    width: 180px; 
-    height: 150px;
+    width: 200px; 
+    height: 140px;
 
-    background-color: #F0EAE4;    /* Set up Border */
-    border-radius: 4px;           /* Slightly Curve edges */
+    background-color: #ABDBAF;    /* Set up Border */
+    border-style: none;
+    border-radius: 4px; 
     overflow: hidden;             /* Fixes the corners */
     
+    font-family: "Montserrat";
+}
+
+.title_entry{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.date_entry{
+    margin-top: 10px;
     font-size: 16px;
+    font-weight: 600;
 }
 
 #new_entry {
-    font-size: 30px;
+    font-size: 100px;
+    font-weight: 80;
 }
 
-.title_entry {
+button:hover {
+    cursor: pointer;
+    color: white;
+}
 
+.add:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    transition: .3s linear;
+}
+
+.content {
+    z-index: 4;
+    background-color: #ABDBAF;
+    border-radius: 4px;
+    transition: .3s linear;
+
+    width: 30vw;
+    height: 40vh;
+    padding: 15px;
+
+    font-size: 25px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }

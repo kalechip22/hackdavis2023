@@ -6,38 +6,74 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
-        <title>journal entry</title>
+        <title>mimo: journal entry</title>
+        <link rel="stylesheet" href="./home.css">
         <link rel="stylesheet" href="./newentry.css">
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
     </head>
     
     <body>
-        <main>
-            <a href="./portal.html">Portal</a></li>
-            <div class="container">
-                <div class="journal">
-                    <h1>New Journal Entry</h1>
-                    <div class="data">
-                        <form method="POST" action="/post-journal">
+        <div class="navigation">
+            <nav class="navbar">
+                <!-- LOGO -->
+                
+                <div class="logo">
+                  <img class="leaf_icon" src="/images/leaf.png" alt="Leaf Logo">
+                  mimo
+                </div>
+                
+                <!-- NAVIGATION MENU -->
+                <ul class="nav-links">
+                
+                <!-- NAVIGATION MENUS -->
+                <div class="menu">
+                  <li class="list"><a href="./home.html">Home</a></li>
+                  <li class="list"><a href="./newentry.html">New Entry</a></li>
+                  
+                  <li class="list"><a href="./portal.html">Journal</a></li>
+                  
+                  <li class="list"><a href="./resource.html">Resources</a></li>
+    
+                  <li class="list login"><a href="./signin.html">Login</a></li>
+    
+                </div>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="journal">
+                <h1>New Journal Entry</h1>
+                <div class="data">
+                    <form method="POST" action="/post-journal">
+                        <div class="form-input">
                             <label for="topic">Topic:</label><br>
                             <input type="text" id="topic" name="topic"><br>
-
+                        </div>
+                        
+                        <div class="form-input">
                             <label for="written">Date:</label><br>
                             <input type="date" id="written" name="written"><br>
+                        </div>
 
+                        <div class="form-input">
                             <label for="content">Entry:</label><br>
                             <textarea type="text" id="content" name="content"></textarea><br>
-
-                            <input type="submit" value="Save">
-                            <!-- <button id="save">Save</button> -->
-                        </form>
-                    </div> 
-                    <!-- <div class="submit">
+                        </div>
                         
-                    </div> -->
+                        <div class="button-input">
+                            <input class="buttons" type="submit" value="Save">
+                        </div>
+                        
+                        <!-- <button id="save">Save</button> -->
+                    </form>
                 </div> 
-            </div>
-        </main>
+                <!-- <div class="submit">
+                    
+                </div> -->
+            </div> 
+        </div>
+
         <script src="newentry.js"></script>
     </body>
 </html>
