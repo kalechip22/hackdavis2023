@@ -12,51 +12,54 @@
   </head>
   
   <body>
-    <main>
-        <div class="navigation">
-            <nav class="navbar">
-                <!-- LOGO -->
-                <div class="logo">MIMO</div>
-                
-                <!-- NAVIGATION MENU -->
-                <ul class="nav-links">
-                
-                <!-- USING CHECKBOX HACK -->
-                <input type="checkbox" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-                
-                <!-- NAVIGATION MENUS -->
-                <div class="menu">
-                
-                <li><a href="/">Home</a></li>
-                <li><a href="/">About</a></li>
-                
-                <li class="services">
-                <a href="/">Services</a>
-                
-                <!-- DROPDOWN MENU -->
-                <ul class="dropdown">
-                <li><a href="/">Dropdown 1 </a></li>
-                <li><a href="/">Dropdown 2</a></li>
-                <li><a href="/">Dropdown 2</a></li>
-                <li><a href="/">Dropdown 3</a></li>
-                <li><a href="/">Dropdown 4</a></li>
-                </ul>
-                
-                </li>
-                
-                <li><a href="/">Pricing</a></li>
-                <li><a href="/">Contact</a></li>
-                </div>
-                </ul>
-            </nav>
-        </div>
+    <div class="navigation">
+        <nav class="navbar">
+            <!-- LOGO -->
+            
+            <div class="logo">
+              <img class="leaf_icon" src="../images/leaf.png" alt="Leaf Logo">
+              mimo
+            </div>
+            
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+            
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+              <li class="list"><a href="./home.html">Home</a></li>
+              <li class="list"><a href="/">About</a></li>
+              
+              <li class="list resource"><a href="./resource.html">Resources</a>
+              
+              <li class="list services"><a href="/">Services</a>
+              <!-- DROPDOWN MENU -->
+              <!-- <ul class="list" class="dropdown">
+              <li><a href="/">Dropdown 1 </a></li>
+              <li><a href="/">Dropdown 2</a></li>
+              <li><a href="/">Dropdown 2</a></li>
+              <li><a href="/">Dropdown 3</a></li>
+              <li><a href="/">Dropdown 4</a></li>
+              </ul> -->
+              
+              </li>
+              
+              <li><a class="login signin" href="./signin.html">Sign In</a></li>
+              <li><a class="login signup" href="./signup.html">Sign Up</a></li>
+            </div>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="main">
+      <div class="info">
+        
+      </div>
 
-        <div class="button_box">
-            <button class="button signin">sign in</button>
-            <button class="button signup">sign up</button>
-        </div>
-    </main>
+    </div>
 	<script src="home.js"></script>
   </body>
 </html>
