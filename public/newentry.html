@@ -6,14 +6,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
-        <title>MIMO</title>
+        <title>journal entry</title>
         <link rel="stylesheet" href="./newentry.css">
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
     </head>
     
     <body>
         <main>
-            
+            <div class="container">
+                <div class="journal">
+                    <h1>New Journal Entry</h1>
+                    <div class="data">
+                        <form method="POST" action="/post-journal">
+                            <label for="topic">Topic:</label><br>
+                            <input type="text" id="topic" name="topic"><br>
+
+                            <label for="written">Date:</label><br>
+                            <input type="date" id="written" name="written"><br>
+
+                            <label for="content">Entry:</label><br>
+                            <textarea type="text" id="content" name="content"></textarea><br>
+
+                            <input type="submit" value="Save">
+                            <!-- <button id="save">Save</button> -->
+                        </form>
+                    </div> 
+                    <!-- <div class="submit">
+                        
+                    </div> -->
+                </div> 
+            </div>
         </main>
         <script src="newentry.js"></script>
     </body>
