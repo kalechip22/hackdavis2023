@@ -21,7 +21,7 @@
 }
 
 .main {
-    margin-top: 300px; /* Add a top margin to avoid content overlay */
+    margin-top: 100px; /* Add a top margin to avoid content overlay */
 }
 
 /* NAVBAR STYLING STARTS */
@@ -32,7 +32,7 @@
     padding: 20px;
     background-color: #36b49f;
     color: #fff;
-
+    height: 100px; /*match to margin-top of main so that theres no weirdness*/
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
@@ -123,26 +123,62 @@ display: block;
 
 /* the main section that should be scroll */
 .main{
-    /* display: flex; */
     height: 100%;
     background-color: blue;
-    /* flex-direction: row; */
-    /* display: 100%; */
 }
-.hook, .works{
-    background-color: red;
+.firstMessage{
+    text-align: center;
+    background-color: purple;
+}
+#titleText{
+    padding-top: 50px;
+    font-size: 100px;
+}
+#directions{
+    padding-top: 20px;
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+.hook, .works, .lastOne{
+    background-color: yellow; 
     display: flex;
+    text-align: center;
     flex-direction: row;
-    height: 33%;
+    height: 100%;
+    justify-content: space-around;
 }
-.left1{
-    display: inline-block;
+.text{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
     width: 50%;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
-.right1{
+.images{
     display: inline-block;
+    text-align: center;
     width: 50%;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
+.flipCard{
+    display: flex;
+    align-items: center;
+    /* display: inline-block; */
+    text-align: center;
+    width: 80%;
+    background-color: red;
+
+ }
+ #imageBox{
+    width: 200px;
+    height: 100px;
+ }
+
+
 
 /* RESPONSIVE NAVBAR MENU STARTS */
 
